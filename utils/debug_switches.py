@@ -1,0 +1,2 @@
+IS_DEBUG = 1
+NSCC_MODE = 0

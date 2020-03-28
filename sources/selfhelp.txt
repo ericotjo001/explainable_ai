@@ -1,0 +1,9 @@
+D:
+cd Desktop@D/meim2venv
+Scripts\activate
+cd fcalc
+python main.py
+
+
+
+python main.py --mode visual --submode drivethru_smallnet_mnist
