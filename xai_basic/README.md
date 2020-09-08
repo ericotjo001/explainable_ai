@@ -10,6 +10,14 @@ The project introduces 2 main things:
 
 As of now, only python is supported. Deep learning/deep neural network models have only been implemented using pytorch. Contact me at ericotjoa@gmail.com if you are interested to set up different implementations.
 
+The main results are produced using 
+```
+python main.py --mode workflow --mode2 workflow1
+python main.py --mode workflow --mode2 workflow2
+python main.py --mode workflow --mode2 workflow3
+```
+Use python main.py to explore any other commands.
+
 
 ![](https://drive.google.com/uc?export=view&id=1GjHAn62ahfeBOaRoxcVMOwpMuQP7nFN2)
 Fig. 1. Sample images from all 10 classes in 3 different types of background (row 1-3). The corresponding heatmaps are in row 4-6.
