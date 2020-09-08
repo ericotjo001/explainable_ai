@@ -5,8 +5,10 @@ For instructions to execute the code, see or run python main.py. The commands wi
 For external dependencies, see utils/utils.py. Please install the packages (they are common).
 
 The main commands used to obtain the results in the papers are:<br>
-python main.py --mode custom_sequence --submode smallnet_mnist --subsubmode RXXXX1<br>
-python main.py --mode custom_sequence --submode alexnet_mnist --subsubmode RXXXX1<br>
+```
+python main.py --mode custom_sequence --submode smallnet_mnist --subsubmode RXXXX1
+python main.py --mode custom_sequence --submode alexnet_mnist --subsubmode RXXXX1
+```
 
 The command for downloading data into the right place is included in the code. In fact, data will be automatically downloaded when you run the main process, if it does not exist in the directory yet.
 
