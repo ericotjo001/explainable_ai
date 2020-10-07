@@ -10,7 +10,9 @@ The project introduces 2 main things:
 
 As of now, only python is supported. Deep learning/deep neural network models have only been implemented using pytorch. Contact me at ericotjoa@gmail.com if you are interested to set up different implementations.
 
-The main results are produced using 
+Be sure to check out the tutorial folder to see how to use or display the dataset.
+
+The main results in the paper are produced using 
 ```
 python main.py --mode workflow --mode2 workflow1
 python main.py --mode workflow --mode2 workflow2
