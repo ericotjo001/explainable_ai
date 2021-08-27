@@ -14,5 +14,4 @@ The command for downloading data into the right place is included in the code. I
 
 No support will be provided for this package.
 
-Pre-trained models:
-https://drive.google.com/open?id=1-r0_Djz3wcLlyx_xDYgM6hJQ_0lrvbxd
+Pre-trained models: this project will no longer be updated, link to pre-trained model has been removed.
