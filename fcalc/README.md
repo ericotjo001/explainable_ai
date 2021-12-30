@@ -1,3 +1,5 @@
+Pre-trained models: <b>this project will no longer be updated</b>, link to pre-trained model has been removed.
+
 This package contains the code to generate the results in [Generalization on the Enhancement of Layerwise Relevance Interpretability of Deep Neural Network](https://arxiv.org/abs/2009.02516).
 
 For instructions to execute the code, see or run python main.py. The commands will be printed.
@@ -14,4 +16,4 @@ The command for downloading data into the right place is included in the code. I
 
 No support will be provided for this package.
 
-Pre-trained models: this project will no longer be updated, link to pre-trained model has been removed.
+

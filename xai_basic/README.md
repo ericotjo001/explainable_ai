@@ -23,3 +23,5 @@ Use python main.py to explore any other commands.
 
 ![](https://drive.google.com/uc?export=view&id=1GjHAn62ahfeBOaRoxcVMOwpMuQP7nFN2)
 Fig. 1. Sample images from all 10 classes in 3 different types of background (row 1-3). The corresponding heatmaps are in row 4-6.
+
+Existing results are available in the google drive <a href="https://drive.google.com/drive/folders/1fk9ABel49Vdlp4IcZsffgKoyM8rE110W?usp=sharing">link</a>.

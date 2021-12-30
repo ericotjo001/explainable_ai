@@ -1,0 +1,33 @@
+python main_imgnet.py --mode train --PROJECT_ID imgnet256_resnet34 --model resnet34 --DATA_DIR D:/shigoto/ImageNet/ILSVRC --n_iter 120
+
+python main_imgnet.py --mode xai_collect --PROJECT_ID imgnet256_resnet34 --model resnet34 --DATA_DIR D:/shigoto/ImageNet/ILSVRC --split val --method Saliency --n_debug_imagenet 10000
+python main_imgnet.py --mode xai_display_collection --PROJECT_ID imgnet256_resnet34 --method Saliency
+python main_imgnet.py --mode xai_collect --PROJECT_ID imgnet256_resnet34 --model resnet34 --DATA_DIR D:/shigoto/ImageNet/ILSVRC --split val --method InputXGradient --n_debug_imagenet 10000
+python main_imgnet.py --mode xai_display_collection --PROJECT_ID imgnet256_resnet34 --method InputXGradient
+python main_imgnet.py --mode xai_collect --PROJECT_ID imgnet256_resnet34 --model resnet34 --DATA_DIR D:/shigoto/ImageNet/ILSVRC --split val --method LayerGradCam --n_debug_imagenet 10000
+python main_imgnet.py --mode xai_display_collection --PROJECT_ID imgnet256_resnet34 --method LayerGradCam
+python main_imgnet.py --mode xai_collect --PROJECT_ID imgnet256_resnet34 --model resnet34 --DATA_DIR D:/shigoto/ImageNet/ILSVRC --split val --method Deconvolution --n_debug_imagenet 10000
+python main_imgnet.py --mode xai_display_collection --PROJECT_ID imgnet256_resnet34 --method Deconvolution
+python main_imgnet.py --mode xai_collect --PROJECT_ID imgnet256_resnet34 --model resnet34 --DATA_DIR D:/shigoto/ImageNet/ILSVRC --split val --method GuidedBackprop --n_debug_imagenet 10000
+python main_imgnet.py --mode xai_display_collection --PROJECT_ID imgnet256_resnet34 --method GuidedBackprop
+python main_imgnet.py --mode xai_collect --PROJECT_ID imgnet256_resnet34 --model resnet34 --DATA_DIR D:/shigoto/ImageNet/ILSVRC --split val --method DeepLift --n_debug_imagenet 10000
+python main_imgnet.py --mode xai_display_collection --PROJECT_ID imgnet256_resnet34 --method DeepLift
+
+python main_imgnet.py --mode xai_display_boxplot --PROJECT_ID imgnet256_resnet34 --DATA_DIR D:/shigoto/ImageNet/ILSVRC --model resnet34
+
+python main_imgnet.py --mode gax --model resnet34 --PROJECT_ID imgnet256_resnet34 --DATA_DIR D:/shigoto/ImageNet/ILSVRC --submethod sum --first_n_correct 10 --target_co 15 --gax_learning_rate 0.1 
+
+python main_imgnet.py --mode gax_display --PROJECT_ID imgnet256_resnet34 --model resnet34 --DATA_DIR D:/shigoto/ImageNet/ILSVRC --submethod sum --img_index 2
+
+python main_imgnet.py --mode gax_coplot --PROJECT_IDs imgnet256_resnet34 imgnet256_alexnet --DATA_DIR D:/shigoto/ImageNet/ILSVRC --submethod sum 
+python main_imgnet.py --mode xai_display_boxplot --PROJECT_ID imgnet256_resnet34 --DATA_DIR D:/shigoto/ImageNet/ILSVRC --model resnet34
+
+
+python main_imgnet.py --mode xai_collect2 --PROJECT_ID imgnet256_resnet34 --model resnet34 --DATA_DIR D:/shigoto/ImageNet/ILSVRC --split val --method LayerGradCam.conv1 --n_debug_imagenet 10000
+python main_imgnet.py --mode xai_collect2 --PROJECT_ID imgnet256_resnet34 --model resnet34 --DATA_DIR D:/shigoto/ImageNet/ILSVRC --split val --method LayerGradCam.layer1 --n_debug_imagenet 10000
+python main_imgnet.py --mode xai_collect2 --PROJECT_ID imgnet256_resnet34 --model resnet34 --DATA_DIR D:/shigoto/ImageNet/ILSVRC --split val --method LayerGradCam.layer2 --n_debug_imagenet 10000
+python main_imgnet.py --mode xai_collect2 --PROJECT_ID imgnet256_resnet34 --model resnet34 --DATA_DIR D:/shigoto/ImageNet/ILSVRC --split val --method LayerGradCam.layer3 --n_debug_imagenet 10000
+python main_imgnet.py --mode xai_collect2 --PROJECT_ID imgnet256_resnet34 --model resnet34 --DATA_DIR D:/shigoto/ImageNet/ILSVRC --split val --method LayerGradCam.layer4 --n_debug_imagenet 10000
+
+python main_imgnet.py --mode xai_display_boxplot2 --PROJECT_ID imgnet256_resnet34 --DATA_DIR D:/shigoto/ImageNet/ILSVRC --model resnet34
+

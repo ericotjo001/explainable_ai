@@ -1,0 +1,51 @@
+python main_pneu.py --mode train --PROJECT_ID pneu256n_1 --model resnet34 --n_iter 64 --batch_size 4 --realtime_print 1 --min_iter 10 --n_debug 16
+python main_pneu.py --mode evaluate --model resnet34 --PROJECT_ID pneu256n_1  --n_debug 0
+
+python main_pneu.py --mode xai_collect --model resnet34 --PROJECT_ID pneu256n_1 --method Saliency --split train --realtime_print 1 --n_debug 0
+python main_pneu.py --mode xai_collect --model resnet34 --PROJECT_ID pneu256n_1 --method Saliency --split val --realtime_print 1 --n_debug 0
+python main_pneu.py --mode xai_collect --model resnet34 --PROJECT_ID pneu256n_1 --method Saliency --split test --realtime_print 1 --n_debug 0
+python main_pneu.py --mode xai_collect --model resnet34 --PROJECT_ID pneu256n_1 --method InputXGradient --split train --realtime_print 1 --n_debug 0
+python main_pneu.py --mode xai_collect --model resnet34 --PROJECT_ID pneu256n_1 --method InputXGradient --split val --realtime_print 1 --n_debug 0
+python main_pneu.py --mode xai_collect --model resnet34 --PROJECT_ID pneu256n_1 --method InputXGradient --split test --realtime_print 1 --n_debug 0
+python main_pneu.py --mode xai_collect --model resnet34 --PROJECT_ID pneu256n_1 --method LayerGradCam --split train --realtime_print 1 --n_debug 0
+python main_pneu.py --mode xai_collect --model resnet34 --PROJECT_ID pneu256n_1 --method LayerGradCam --split val --realtime_print 1 --n_debug 0
+python main_pneu.py --mode xai_collect --model resnet34 --PROJECT_ID pneu256n_1 --method LayerGradCam --split test --realtime_print 1 --n_debug 0
+python main_pneu.py --mode xai_collect --model resnet34 --PROJECT_ID pneu256n_1 --method Deconvolution --split train --realtime_print 1 --n_debug 0
+python main_pneu.py --mode xai_collect --model resnet34 --PROJECT_ID pneu256n_1 --method Deconvolution --split val --realtime_print 1 --n_debug 0
+python main_pneu.py --mode xai_collect --model resnet34 --PROJECT_ID pneu256n_1 --method Deconvolution --split test --realtime_print 1 --n_debug 0
+python main_pneu.py --mode xai_collect --model resnet34 --PROJECT_ID pneu256n_1 --method GuidedBackprop --split train --realtime_print 1 --n_debug 0
+python main_pneu.py --mode xai_collect --model resnet34 --PROJECT_ID pneu256n_1 --method GuidedBackprop --split val --realtime_print 1 --n_debug 0
+python main_pneu.py --mode xai_collect --model resnet34 --PROJECT_ID pneu256n_1 --method GuidedBackprop --split test --realtime_print 1 --n_debug 0
+python main_pneu.py --mode xai_collect --model resnet34 --PROJECT_ID pneu256n_1 --method DeepLift --split train --realtime_print 1 --n_debug 0
+python main_pneu.py --mode xai_collect --model resnet34 --PROJECT_ID pneu256n_1 --method DeepLift --split val --realtime_print 1 --n_debug 0
+python main_pneu.py --mode xai_collect --model resnet34 --PROJECT_ID pneu256n_1 --method DeepLift --split test --realtime_print 1 --n_debug 0
+python main_pneu.py --mode xai_display_collection --model resnet34 --PROJECT_ID pneu256n_1 --method Saliency --split train
+python main_pneu.py --mode xai_display_collection --model resnet34 --PROJECT_ID pneu256n_1 --method Saliency --split val
+python main_pneu.py --mode xai_display_collection --model resnet34 --PROJECT_ID pneu256n_1 --method Saliency --split test
+python main_pneu.py --mode xai_display_collection --model resnet34 --PROJECT_ID pneu256n_1 --method InputXGradient --split train
+python main_pneu.py --mode xai_display_collection --model resnet34 --PROJECT_ID pneu256n_1 --method InputXGradient --split val
+python main_pneu.py --mode xai_display_collection --model resnet34 --PROJECT_ID pneu256n_1 --method InputXGradient --split test
+python main_pneu.py --mode xai_display_collection --model resnet34 --PROJECT_ID pneu256n_1 --method LayerGradCam --split train
+python main_pneu.py --mode xai_display_collection --model resnet34 --PROJECT_ID pneu256n_1 --method LayerGradCam --split val
+python main_pneu.py --mode xai_display_collection --model resnet34 --PROJECT_ID pneu256n_1 --method LayerGradCam --split test
+python main_pneu.py --mode xai_display_collection --model resnet34 --PROJECT_ID pneu256n_1 --method Deconvolution --split train
+python main_pneu.py --mode xai_display_collection --model resnet34 --PROJECT_ID pneu256n_1 --method Deconvolution --split val
+python main_pneu.py --mode xai_display_collection --model resnet34 --PROJECT_ID pneu256n_1 --method Deconvolution --split test
+python main_pneu.py --mode xai_display_collection --model resnet34 --PROJECT_ID pneu256n_1 --method GuidedBackprop --split train
+python main_pneu.py --mode xai_display_collection --model resnet34 --PROJECT_ID pneu256n_1 --method GuidedBackprop --split val
+python main_pneu.py --mode xai_display_collection --model resnet34 --PROJECT_ID pneu256n_1 --method GuidedBackprop --split test
+python main_pneu.py --mode xai_display_collection --model resnet34 --PROJECT_ID pneu256n_1 --method DeepLift --split train
+python main_pneu.py --mode xai_display_collection --model resnet34 --PROJECT_ID pneu256n_1 --method DeepLift --split val
+python main_pneu.py --mode xai_display_collection --model resnet34 --PROJECT_ID pneu256n_1 --method DeepLift --split test
+
+python main_pneu.py --mode xai_display_boxplot --PROJECT_ID pneu256n_1
+
+python main_pneu.py --mode gax --PROJECT_ID pneu256n_1 --model resnet34 --label NORMAL --split test --first_n_correct 100 --target_co 48 --gax_learning_rate 0.1
+python main_pneu.py --mode gax --PROJECT_ID pneu256n_1 --model resnet34 --label PNEUMONIA --split test --first_n_correct 100 --target_co 48 --gax_learning_rate 0.1
+
+python main_pneu.py --mode gax_display --PROJECT_ID pneu256n_1 --img_name IM-0009-0001.jpeg --label NORMAL --split test --submethod sum
+python main_pneu.py --mode gax_display --PROJECT_ID pneu256n_1 --img_name person1_virus_6.jpeg --label PNEUMONIA --split test --submethod sum
+
+OPTIONAL: testing optimization for individual images
+python main_pneu.py --mode gax --PROJECT_ID pneu256n_1 --img_name IM-0009-0001.jpeg --label NORMAL --split test --target_co 48 --gax_learning_rate 0.001 
+python main_pneu.py --mode gax --PROJECT_ID pneu256n_1 --img_name person1_virus_6.jpeg --label PNEUMONIA --split test --target_co 48 --gax_learning_rate 0.001 

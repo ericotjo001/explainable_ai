@@ -1,0 +1,1 @@
+Task: Binary classification of Pneumonia from chest X-ray images
