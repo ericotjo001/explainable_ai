@@ -1,6 +1,8 @@
-## Generative Augmentative EXplanation (GAX)
+## Augmentative eXplanation and the Distributional Gap of Confidence Optimization Score
 
-This paper introduces GAX as a heatmap generation methods as a study on eXplainable AI. Confidence Optimization score is optimized through GAX, thus our heatmaps can be used to increase predictive probability.
+This folder contains the codes for [Augmentative eXplanation and the Distributional Gap of Confidence Optimization Score](https://arxiv.org/abs/2201.00009).
+
+This project Augmentative Explanation and Confidence Optimization score to use heatmap/saliency explanations for improving predictive probability. This project also introduces GAX as a heatmap generation methods as a study on eXplainable AI. Confidence Optimization score is optimized through GAX, thus our heatmaps can be used to increase predictive probability.
 
 Examples of commands to reproduce our results can be found in _quick_start folder. Running sequence.py files will generate quickcommands.txt which contains the direct python commands. Settings can be changed in sequence.py according to users' preference.
 

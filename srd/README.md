@@ -1,4 +1,7 @@
 # Self Reward Design with Fine-grained Interpretability
+
+This folder contains the codes for [Self Reward Design with Fine-grained Interpretability](https://arxiv.org/abs/2112.15034).
+
 In this project, we attempt to solve reinforcement learning problem using artificial neural network (NN) attained to achieve interpretability in an extreme way. Each neuron in the NN is defined with purposeful human design.
 
 Quick start: refer to the `_quick_start` folder.<br>

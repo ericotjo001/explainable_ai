@@ -1,6 +1,8 @@
 ## Two Instances of Interpretable Neural Network for Universal Approximations 
 
-The experimental results and iamges in the paper "Two Instances of Interpretable Neural Network for Universal Approximations" can be obtained by running the following commands.
+This folder contains the codes for [Two Instances of Interpretable Neural Network for Universal Approximations](https://arxiv.org/abs/2112.15026).
+
+The experimental results and images in the paper can be obtained by running the following commands.
 
 ### 1. Triangularly Constructed NN (TNN)
 Results are shown in triangular_construction.ipynb
