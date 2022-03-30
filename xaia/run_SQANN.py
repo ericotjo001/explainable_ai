@@ -53,5 +53,8 @@ if __name__ == '__main__':
             run_example2(args)
         elif args['submode'] == 'collect':
             collect_example2(args)
+    elif args['mode'] == 'example_ssup':
+        from SQANN.examples_ssup import run_example_ssup
+        run_example_ssup(args)
     else:
         print(MODES)

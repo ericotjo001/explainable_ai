@@ -1,8 +1,18 @@
+Future plan: development will continue in another repository: TO BE UPDATED
+
+# Version 2.
+We tested BONN and abstract some classes for SQANN. 
+
+Example on how to run BONN: 
+```
+python main_BONN.py --mode BONN --data donut_example  --elasticsize 48  --show_fig_and_exit 0 --debug_toggles 00000
+python main_BONN.py --mode BONN --data big_donut_example --elasticsize 256 --show_fig_and_exit 0 --debug_toggles 00000
+```
+
+# Version 1.
 ## Two Instances of Interpretable Neural Network for Universal Approximations 
 
-This folder contains the codes for [Two Instances of Interpretable Neural Network for Universal Approximations](https://arxiv.org/abs/2112.15026).
-
-The experimental results and images in the paper can be obtained by running the following commands.
+The experimental results and iamges in the paper "Two Instances of Interpretable Neural Network for Universal Approximations" can be obtained by running the following commands.
 
 ### 1. Triangularly Constructed NN (TNN)
 Results are shown in triangular_construction.ipynb

@@ -70,8 +70,6 @@ class DonutData(Data2DInput):
         # print(X.shape) # (N,D=2)
         self.X = X
         self.X_test = self.X + np.random.uniform(-test_sd,test_sd,size=self.X.shape) 
-        # print(self.X_test)
-        # raise Exception('gg')
 
     def get_labels(self, T):
         self.Y = np.cos(T)
