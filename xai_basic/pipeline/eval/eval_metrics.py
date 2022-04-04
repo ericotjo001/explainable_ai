@@ -18,12 +18,12 @@ class XAITranformation3c1c(object):
 
         if normalize=='absmax_before_sum':
             # will ensure zero stays as zero
-            h = h/np.max(np.abs(h))
             h = np.sum(h,axis=0)
             h = h/np.max(np.abs(h))
             return h
         elif normalize=='absmax_after_sum':
             # will ensure zero stays as zero
+            # we keep it here just in case (same as absmax_before_sum)
             h = np.sum(h,axis=0)
             h = h/np.max(np.abs(h))
             return h
