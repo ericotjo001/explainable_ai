@@ -3,7 +3,14 @@ Future plan: development will continue in another repository: TO BE UPDATED
 # Version 2.
 We tested BONN and abstract some classes for SQANN. 
 
-Example on how to run BONN: 
+Example on how to run the new SQANN:
+```
+python main_BONN.py --mode SQANN --submode donut_example --show_fig_and_exit 0
+python main_BONN.py --mode SQANN --submode multidonut_example --show_fig_and_exit 0
+python main_BONN.py --mode SQANN --submode discretedonut_example --show_fig_and_exit 0
+```
+
+Example on how to run BONN (not published in any paper): 
 ```
 python main_BONN.py --mode BONN --data donut_example  --elasticsize 48  --show_fig_and_exit 0 --debug_toggles 00000
 python main_BONN.py --mode BONN --data big_donut_example --elasticsize 256 --show_fig_and_exit 0 --debug_toggles 00000
