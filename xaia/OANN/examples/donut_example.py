@@ -63,7 +63,7 @@ def train_donut_example(dargs, label_mode='discrete'):
         raise NotImplementedError()
 
     ############# DATA #############
-    datax, folder_to_class_mapping, DIRS =prep_data(dargs, label_mode)
+    datax, folder_to_class_mapping, DIRS = prep_data(dargs, label_mode)
 
     ########## SETUP MODEL #########
     from OANN.src.model import BONN

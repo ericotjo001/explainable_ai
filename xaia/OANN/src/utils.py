@@ -147,9 +147,9 @@ def ood_searcher(X,Y,net,N, error_th):
 
 def standard_evaluation(X, Y, net, get_interp_indices=False, output_mode='continuous',verbose=100):
     if output_mode=='continuous':
-        standard_evaluation_cont_var(X,Y,net,get_interp_indices=get_interp_indices, verbose=verbose)
+        return standard_evaluation_cont_var(X,Y,net,get_interp_indices=get_interp_indices, verbose=verbose)
     elif output_mode=='discrete':
-        standard_evaluation_discrete_var(X,Y,net,get_interp_indices=get_interp_indices, verbose=verbose)
+        return standard_evaluation_discrete_var(X,Y,net,get_interp_indices=get_interp_indices, verbose=verbose)
 
 def standard_evaluation_cont_var(X,Y,net,get_interp_indices=False, verbose=100):
     INTERP_INDICES = []
