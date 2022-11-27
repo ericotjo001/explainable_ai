@@ -1,0 +1,15 @@
+{
+    "best_acc": 0.984375,
+    "best_epoch": 0,
+    "dargs": {
+        "CKPT_FOLDER_DIR": "checkpoint",
+        "PROJECT_NAME": "project01",
+        "batch_size": 16,
+        "loss": "CE+mab",
+        "mab_regularization": 10.0,
+        "min_epoch": -1,
+        "mode": "train_val",
+        "model_name": "mabmodel_10_1",
+        "n_epoch": 128
+    }
+}

@@ -1,0 +1,1 @@
+ROOTDIR = 'D:/Desktop@D/xai_basic' # set this to the full directory of the project folder.

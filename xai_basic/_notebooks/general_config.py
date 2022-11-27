@@ -1,1 +1,0 @@
-ROOTDIR = 'D:/Desktop@D/xai_basic'

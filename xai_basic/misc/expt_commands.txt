@@ -1,0 +1,73 @@
+########## First, smaller experiments. Only 3 classes ##########
+
+python main.py --mode prepare_data --n_classes 3 --n_shards 16 --n_per_shard 256 --PROJECT_NAME project01
+python main.py --mode prepare_data --n_classes 3 --n_shards 4 --n_per_shard 256 --PROJECT_NAME project01 --data_mode val
+python main.py --mode prepare_data --n_classes 3 --n_shards 4 --n_per_shard 256 --PROJECT_NAME project01 --data_mode test
+
+python main.py --mode train_val --PROJECT_NAME project01 --n_epoch 128 --loss CE+mab --mab_regularization 10 --model_name mabmodel_10_1
+python main.py --mode train_val --PROJECT_NAME project01 --n_epoch 128 --loss CE+mab --mab_regularization 10 --model_name mabmodel_10_2
+python main.py --mode train_val --PROJECT_NAME project01 --n_epoch 128 --loss CE+mab --mab_regularization 10 --model_name mabmodel_10_3
+python main.py --mode train_val --PROJECT_NAME project01 --n_epoch 128 --loss CE+mab --mab_regularization 10 --model_name mabmodel_10_4
+python main.py --mode train_val --PROJECT_NAME project01 --n_epoch 128 --loss CE+mab --mab_regularization 10 --model_name mabmodel_10_5
+
+python main.py --mode train_val --PROJECT_NAME project01 --n_epoch 128 --loss CE+mab --mab_regularization 5 --model_name mabmodel_5_1 --min_epoch 12
+
+python main.py --mode eval --PROJECT_NAME project01 --model_name mabmodel_10_1
+python main.py --mode eval --PROJECT_NAME project01 --model_name mabmodel_10_2
+python main.py --mode eval --PROJECT_NAME project01 --model_name mabmodel_10_3
+python main.py --mode eval --PROJECT_NAME project01 --model_name mabmodel_10_4
+python main.py --mode eval --PROJECT_NAME project01 --model_name mabmodel_10_5
+python main.py --mode eval --PROJECT_NAME project01 --model_name mabmodel_5_1
+
+python main.py --mode visualization --PROJECT_NAME project01 --model_names mabmodel_10_1 mabmodel_10_2 mabmodel_10_3 mabmodel_10_4 mabmodel_10_5 mabmodel_5_1
+
+The following need to be run twice
+python main.py --mode eval_and_gallery --PROJECT_NAME project01 --model_name mabmodel_10_1
+python main.py --mode eval_and_gallery --PROJECT_NAME project01 --model_name mabmodel_10_2
+python main.py --mode eval_and_gallery --PROJECT_NAME project01 --model_name mabmodel_10_3
+python main.py --mode eval_and_gallery --PROJECT_NAME project01 --model_name mabmodel_10_4
+python main.py --mode eval_and_gallery --PROJECT_NAME project01 --model_name mabmodel_10_5
+python main.py --mode eval_and_gallery --PROJECT_NAME project01 --model_name mabmodel_5_1
+
+
+########## Slightly bigger experiment. 10 classes ##########
+
+python main.py --mode prepare_data --n_classes 10 --n_shards 8 --n_per_shard 512 --PROJECT_NAME project02
+python main.py --mode prepare_data --n_classes 10 --n_shards 4 --n_per_shard 256 --PROJECT_NAME project02 --data_mode val
+python main.py --mode prepare_data --n_classes 10 --n_shards 4 --n_per_shard 256 --PROJECT_NAME project02 --data_mode test
+
+python main.py --mode train_val --n_classes 10 --PROJECT_NAME project02 --n_epoch 128 --loss CE+mab --mab_regularization 5 --model_name mabmodel_5_1 --min_epoch 12
+python main.py --mode eval --n_classes 10 --PROJECT_NAME project02 --model_name mabmodel_5_1
+
+python main.py --mode visualization --PROJECT_NAME project02 --model_names mabmodel_5_1
+
+python main.py --mode eval_and_gallery  --n_classes 10 --PROJECT_NAME project02 --model_name mabmodel_5_1
+
+
+
+
+
+
+
+
+##### Just making sure things haven't broken #####
+
+# Test 10 classes
+python main.py --mode prepare_data --n_classes 10 --n_shards 1 --n_per_shard 17 --PROJECT_NAME test10
+
+# Test 3 classes again after 10-class edit
+python main.py --mode prepare_data --n_classes 3 --n_shards 1 --n_per_shard 128 --PROJECT_NAME test20
+python main.py --mode prepare_data --n_classes 3 --n_shards 1 --n_per_shard 12 --PROJECT_NAME test20 --data_mode val
+python main.py --mode prepare_data --n_classes 3 --n_shards 1 --n_per_shard 12 --PROJECT_NAME test20 --data_mode test
+python main.py --mode train_val --PROJECT_NAME test20 --n_epoch 128 --loss CE+mab --mab_regularization 10 --model_name mabmodel_10_1
+python main.py --mode eval --PROJECT_NAME test20 --model_name mabmodel_10_1
+
+python main.py --mode visualization --PROJECT_NAME test20 --model_names mabmodel_10_1
+python main.py --mode eval_and_gallery  --n_classes 3 --PROJECT_NAME test20 --model_name mabmodel_10_1
+
+
+
+
+
+
+
