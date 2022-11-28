@@ -71,7 +71,7 @@ python main.py --mode eval_and_gallery --PROJECT_NAME project01 --model_name mab
 ```
 
 ## Version 1.0
-All codes for the first iteration of this work have been moved to srcV1 folder. 
+All codes for the first iteration of this work have been moved to legacy/srcV1 folder. 
 
 Codes are in python, Deep learning models in pytorch.
 
