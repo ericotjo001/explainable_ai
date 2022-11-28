@@ -1,6 +1,6 @@
 # Self Reward Design with Fine-grained Interpretability
 
-!!! This project is currently due to be updated. Current version will be deprecated soon !!!
+$\textcolor{orange}{\text{!!! This project is currently due to be updated !!! }}$ Current version will be deprecated soon, and we are likely to create a new separate repository for this project. 
 
 This folder contains the codes for [Self Reward Design with Fine-grained Interpretability](https://arxiv.org/abs/2112.15034).
 
