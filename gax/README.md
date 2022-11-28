@@ -1,4 +1,4 @@
-<<This project is currently due to be updated. Current version will be deprecated soon>>
+!!! This project is currently due to be updated. Current version will be deprecated soon !!!
 
 ## Augmentative eXplanation and the Distributional Gap of Confidence Optimization Score
 
