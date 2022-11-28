@@ -1,4 +1,4 @@
-Pre-trained models: <b>this project will no longer be updated</b>, link to pre-trained model has been removed.
+$\textcolor{orange}{\text{This project will no longer be updated}}$, link to pre-trained models has been removed.
 
 This package contains the code to generate the results in [Generalization on the Enhancement of Layerwise Relevance Interpretability of Deep Neural Network](https://arxiv.org/abs/2009.02516).
 
