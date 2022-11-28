@@ -1,3 +1,5 @@
+<<This project is currently due to be updated. Current version will be deprecated soon>>
+
 ## Augmentative eXplanation and the Distributional Gap of Confidence Optimization Score
 
 This folder contains the codes for [Augmentative eXplanation and the Distributional Gap of Confidence Optimization Score](https://arxiv.org/abs/2201.00009).
