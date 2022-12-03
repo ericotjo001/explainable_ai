@@ -16,6 +16,8 @@ Fig. 1. Sample images from all 10 classes in 3 different types of background (ro
 
 Existing results are available in the google drive <a href="https://drive.google.com/drive/folders/1H6XfJkdDj-V_T3hnHZZFyoiKoOam3ttM?usp=share_link">link</a>.
 
+Link to appendix files can be found in <a href="https://www.researchgate.net/publication/360439499_xaibasiccyb_supppdf">here</a>.
+
 
 ## Version 2.0
 
