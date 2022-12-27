@@ -16,14 +16,6 @@ This project attempts to improve predictive probability through the Augmentative
 <br>
 <img src="https://drive.google.com/uc?export=view&id=1N4IDRJepmcK0-PkaqpSBDJdPYZRA7QLh" width="480"></img>
 
-### srd
-[Self Reward Design with Fine-grained Interpretability](https://arxiv.org/abs/2112.15034) (arxiv)<br>
-Simple reinforcement learning model with extreme interpretability: each neuron is purposefully designed to include semantically understandable concept.<br>
-
-<img src="https://drive.google.com/uc?export=view&id=101T_MzHh70T7y55TJdBPpvXEo8yWgntT" width="240"></img>
-<img src="https://drive.google.com/uc?export=view&id=1C1pK4bOtnaBagbJc9nBfSXV2BI-P7n8g" width="240"></img><br>
-Fig. shows trajectories taken by SRD-trained 2D robots.
-
 ### xai_basic
 This project provides synthetic dataset to measure the 'accuracy of heatmaps'.<br>
 [**Quantifying Explainability of Saliency Methods in Deep Neural Networks**](https://arxiv.org/abs/2009.02899) (arxiv). <br>
