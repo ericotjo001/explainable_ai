@@ -1,57 +1,35 @@
-$\textcolor{orange}{\text{!!! This project is currently due to be updated. Current version will be deprecated soon !!!}}$
+This github repository contains all the codes required to replicate the results in the paper <b>Improving Deep Neural Network Classification Confidence using Heatmap-based eXplainable AI</b>. Link: [arxiv version](https://arxiv.org/abs/2201.00009).
 
-## Augmentative eXplanation and the Distributional Gap of Confidence Optimization Score
+<img src="https://drive.google.com/uc?export=view&id=1N4IDRJepmcK0-PkaqpSBDJdPYZRA7QLh" width="480"></img>
 
-This folder contains the codes for [Augmentative eXplanation and the Distributional Gap of Confidence Optimization Score](https://arxiv.org/abs/2201.00009).
+# Version 2.
+The streamlined version of version 1 codes and additional experiments are now available.
 
-This project Augmentative Explanation and Confidence Optimization score to use heatmap/saliency explanations for improving predictive probability. This project also introduces GAX as a heatmap generation methods as a study on eXplainable AI. Confidence Optimization score is optimized through GAX, thus our heatmaps can be used to increase predictive probability.
+## Installation
+We use conda environment. The env.yml is provided.
 
-Examples of commands to reproduce our results can be found in _quick_start folder. Running sequence.py files will generate quickcommands.txt which contains the direct python commands. Settings can be changed in sequence.py according to users' preference.
-
-We provide brief descriptions of the commands using Chest X-Ray example. 
-
-***Main files***. main_pneu.py is main script to run GAX on Chest X-Ray pneumonia dataset, main_imgnet.py for ImageNet. Assume we run every scripts from the gax folder, where these two main files are found.
-
-
-Use the following to reshuffle data from https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia, whose validation data folder is not optimal. Assume you extract train, val and test data into data/chest_xray folder.
+The pytorch used here is torch==2.0.0.dev20221226+cu117, with torchvision installed using the following
 ```
-python main_pneu.py --mode data_reshuffle
+pip3 install numpy --pre torch torchvision torchaudio --force-reinstall --extra-index-url https://download.pytorch.org/whl/nightly/cu117
 ```
+pytorch captum has been packaged into pytorch 2.0.
 
-Fine-tuning Resnet34 models and evaluations for Pneumonia dataset:
-```
-python main_pneu.py --mode train --PROJECT_ID pneu256n_1 --model resnet34 --n_iter 64 --batch_size 4 --realtime_print 1 --min_iter 10 --n_debug 16
-python main_pneu.py --mode evaluate --model resnet34 --PROJECT_ID pneu256n_1  --n_debug 0
-```
+## Results
+To replicate our experiment, simply follow the commands in misc/commands.txt.
 
-Collecting CO scores for existing XAI methods, such as Saliency, for train, validation and test data respectively.
-```
-python main_pneu.py --mode xai_collect --model resnet34 --PROJECT_ID pneu256n_1 --method Saliency --split train --realtime_print 1 --n_debug 0
-python main_pneu.py --mode xai_collect --model resnet34 --PROJECT_ID pneu256n_1 --method Saliency --split val --realtime_print 1 --n_debug 0
-python main_pneu.py --mode xai_collect --model resnet34 --PROJECT_ID pneu256n_1 --method Saliency --split test --realtime_print 1 --n_debug 0
-```
+To obtain our existing results, go to https://drive.google.com/drive/folders/1CEVOVmW3yJI7u1AQzJUpq-e9VndLIvTp?usp=share_link
 
-Collected CO scores for training data samples are shown as an individiual histogram.
-```
-python main_pneu.py --mode xai_display_collection --model resnet34 --PROJECT_ID pneu256n_1 --method Saliency --split train
-```
+## Data
+The data we use are publicly available:
+1. ImageNet
+2. https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia
+3. https://www.kaggle.com/datasets/tawsifurrahman/covid19-radiography-database
+4. https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
+5. https://www.kaggle.com/datasets/muratkokludataset/dry-bean-dataset
 
-Once data collection is done, CO scores across different XAI methods are shown together as boxplots.
-```
-python main_pneu.py --mode xai_display_boxplot --PROJECT_ID pneu256n_1
-```
+Extra notes:
+For chest-xray COVID data, we fix the following irregularities manually:
+COVID-3615.png (both images and masks)
 
-Running GAX for the first 100 data samples that are correctly predicted by the fine-tuned models. --label NORMAL and PNEUMONIA are for images stored in the respective folders, where Chest X-Ray images indicate whether the patients are healthy or suffer from pneumonia.
-```
-python main_pneu.py --mode gax --PROJECT_ID pneu256n_1 --model resnet34 --label NORMAL --split test --first_n_correct 100 --target_co 48 --gax_learning_rate 0.1
-python main_pneu.py --mode gax --PROJECT_ID pneu256n_1 --model resnet34 --label PNEUMONIA --split test --first_n_correct 100 --target_co 48 --gax_learning_rate 0.1
-```
-
-Viewing GAX results! You will see a pop up with slider, like 
-
-<img src="_quick_start/demo_img.PNG" width="700px">
-
-```
-python main_pneu.py --mode gax_display --PROJECT_ID pneu256n_1 --img_name IM-0009-0001.jpeg --label NORMAL --split test --submethod sum
-python main_pneu.py --mode gax_display --PROJECT_ID pneu256n_1 --img_name person1_virus_6.jpeg --label PNEUMONIA --split test --submethod sum
-```
+# Version 1.
+Everything related to version 1 code can all be found in legacy/v1 folder. 

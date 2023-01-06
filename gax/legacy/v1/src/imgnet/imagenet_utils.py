@@ -208,7 +208,6 @@ class ImageNetValidation(ImageNetClassificationManager):
         super(ImageNetValidation, self).__init__(None,'',split='val', MAIN_DATA_DIR=MAIN_DATA_DIR)
         self.VAL_IMG_LIST = os.listdir(self.MAIN_DATA_BRANCH_DIR)
 
-
     def get_val_data_by_index(self, i, as_pytorch_tensor=True):
         assert(1<=i+1<=50000)
         img_xml_name = self.VAL_IMG_LIST[i].split('.')[0] + '.xml'

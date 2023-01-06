@@ -1,0 +1,25 @@
+,Baseline,Saliency,InputXGradient,LayerGradCam,Deconvolution,GuidedBackprop,DeepLift
+imagenet_resnet34,0.72198,0.71486,0.52598,0.7026,0.659,0.70552,0.61044
+imagenet_alexnet,0.55142,0.5302,0.34736,0.5417,0.364,0.48438,0.40694
+chestxray_pneu_resnet34,0.690705128,0.690705128,0.600961538,0.671474359,0.690705128,0.689102564,0.618589744
+chestxray_pneu_resnet34_sub,0.708333333,0.708333333,0.642628205,0.713141026,0.700320513,0.711538462,0.668269231
+chestxray_pneu_alexnet,0.628205128,0.628205128,0.509615385,0.605769231,0.636217949,0.634615385,0.546474359
+chestxray_covid_CXCMultiSPA,0.865466402,0.821094415,0.623617806,0.783527077,0.245392685,0.577969946,0.561950666
+creditcardfraud_ccfFPA,0.895321441,0.87176035,0.812521037,0.692359475,0.282059912,0.188488724,0.784584315
+drybean_drybeanFPA,0.877011241,0.867754022,0.70839762,0.64624201,0.817280141,0.777385938,0.712144589
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,Baseline,Saliency,InputXGradient,LayerGradCam,Deconvolution,GuidedBackprop,DeepLift
+imagenet_resnet34,0.722,0.715,0.526,0.703,0.659,0.706,0.61
+imagenet_alexnet,0.551,0.53,0.347,0.542,0.364,0.484,0.407
+chestxray_pneu_resnet34,0.691,0.691,0.601,0.671,0.691,0.689,0.619
+chestxray_pneu_resnet34_sub,0.708,0.708,0.643,0.713,0.7,0.712,0.668
+chestxray_pneu_alexnet,0.628,0.628,0.51,0.606,0.636,0.635,0.546
+chestxray_covid_CXCMultiSPA,0.865,0.821,0.624,0.784,0.245,0.578,0.562
+creditcardfraud_ccfFPA,0.895,0.872,0.813,0.692,0.282,0.188,0.785
+drybean_drybeanFPA,0.877,0.868,0.708,0.646,0.817,0.777,0.712
+,,,,,,,
+,,,,,,,
+This document is compiled manually from all the results we get from our experiments,,,,,,,
+from example imagenet_alexnet/visualization/acc.csv,,,,,,,

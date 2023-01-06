@@ -1,0 +1,162 @@
+The commands used here are for v2.
+
+This means all commands to obtain results from v1 (imagenet and chest x ray for pneumonia) 
+are not included here. Follow the instructions in v1 README etc to get those results.
+
+##################################
+# Part 1
+##################################
+This is additional results, complementary to v1. In v1, we plot results, including the ones with distributional gaps. Here, we also want to know how the accuracies change.
+
+############### IMAGENET DATA ###############
+
+# this is to evaluate the original classification accuracy (ON VALIDATION DATASET, THOUGH)
+python main.py --data imagenet --mode val --model resnet34 --IMGNET_DATA_DIR C:/data/ImageNet/ILSVRC
+
+# this is to evaluate the classification accuracy after using AX process
+python main.py --data imagenet --mode val_ax --ax_method Saliency --model resnet34 --IMGNET_DATA_DIR C:/data/ImageNet/ILSVRC
+python main.py --data imagenet --mode val_ax --ax_method InputXGradient --model resnet34 --IMGNET_DATA_DIR C:/data/ImageNet/ILSVRC
+python main.py --data imagenet --mode val_ax --ax_method LayerGradCam --model resnet34 --IMGNET_DATA_DIR C:/data/ImageNet/ILSVRC
+python main.py --data imagenet --mode val_ax --ax_method Deconvolution --model resnet34 --IMGNET_DATA_DIR C:/data/ImageNet/ILSVRC
+python main.py --data imagenet --mode val_ax --ax_method GuidedBackprop --model resnet34 --IMGNET_DATA_DIR C:/data/ImageNet/ILSVRC
+python main.py --data imagenet --mode val_ax --ax_method DeepLift --model resnet34 --IMGNET_DATA_DIR C:/data/ImageNet/ILSVRC
+
+python main.py --data imagenet --mode vis_co_score --model resnet34 
+
+
+
+# repeat, but for alexnet
+python main.py --data imagenet --mode val --model alexnet --IMGNET_DATA_DIR C:/data/ImageNet/ILSVRC
+
+python main.py --data imagenet --mode val_ax --ax_method Saliency --model alexnet --IMGNET_DATA_DIR C:/data/ImageNet/ILSVRC
+python main.py --data imagenet --mode val_ax --ax_method InputXGradient --model alexnet --IMGNET_DATA_DIR C:/data/ImageNet/ILSVRC
+python main.py --data imagenet --mode val_ax --ax_method LayerGradCam --model alexnet --IMGNET_DATA_DIR C:/data/ImageNet/ILSVRC
+python main.py --data imagenet --mode val_ax --ax_method Deconvolution --model alexnet --IMGNET_DATA_DIR C:/data/ImageNet/ILSVRC
+python main.py --data imagenet --mode val_ax --ax_method GuidedBackprop --model alexnet --IMGNET_DATA_DIR C:/data/ImageNet/ILSVRC
+python main.py --data imagenet --mode val_ax --ax_method DeepLift --model alexnet --IMGNET_DATA_DIR C:/data/ImageNet/ILSVRC
+
+python main.py --data imagenet --mode vis_co_score --model alexnet 
+
+
+
+################ CHEST XRAY PNEUMONIA DATA ###############
+# testing and ax procedure!
+# this is to evaluate the original classification accuracy (ON TEST DATASET)
+python main.py --data chestxray_pneu --mode test --model resnet34 --CHEST_XRAY_PNEUMONIA_DATA_DIR C:/data/chest_xray
+
+python main.py --data chestxray_pneu --mode test_ax --ax_method Saliency --model resnet34 --CHEST_XRAY_PNEUMONIA_DATA_DIR C:/data/chest_xray
+python main.py --data chestxray_pneu --mode test_ax --ax_method InputXGradient --model resnet34 --CHEST_XRAY_PNEUMONIA_DATA_DIR C:/data/chest_xray
+python main.py --data chestxray_pneu --mode test_ax --ax_method LayerGradCam --model resnet34 --CHEST_XRAY_PNEUMONIA_DATA_DIR C:/data/chest_xray
+python main.py --data chestxray_pneu --mode test_ax --ax_method Deconvolution --model resnet34 --CHEST_XRAY_PNEUMONIA_DATA_DIR C:/data/chest_xray
+python main.py --data chestxray_pneu --mode test_ax --ax_method GuidedBackprop --model resnet34 --CHEST_XRAY_PNEUMONIA_DATA_DIR C:/data/chest_xray
+python main.py --data chestxray_pneu --mode test_ax --ax_method DeepLift --model resnet34 --CHEST_XRAY_PNEUMONIA_DATA_DIR C:/data/chest_xray
+
+python main.py --data chestxray_pneu --mode vis_co_score --model resnet34 
+
+# similar, but another model
+python main.py --data chestxray_pneu --mode test --model resnet34_sub --CHEST_XRAY_PNEUMONIA_DATA_DIR C:/data/chest_xray
+
+python main.py --data chestxray_pneu --mode test_ax --ax_method Saliency --model resnet34_sub --CHEST_XRAY_PNEUMONIA_DATA_DIR C:/data/chest_xray
+python main.py --data chestxray_pneu --mode test_ax --ax_method InputXGradient --model resnet34_sub --CHEST_XRAY_PNEUMONIA_DATA_DIR C:/data/chest_xray
+python main.py --data chestxray_pneu --mode test_ax --ax_method LayerGradCam --model resnet34_sub --CHEST_XRAY_PNEUMONIA_DATA_DIR C:/data/chest_xray
+python main.py --data chestxray_pneu --mode test_ax --ax_method Deconvolution --model resnet34_sub --CHEST_XRAY_PNEUMONIA_DATA_DIR C:/data/chest_xray
+python main.py --data chestxray_pneu --mode test_ax --ax_method GuidedBackprop --model resnet34_sub --CHEST_XRAY_PNEUMONIA_DATA_DIR C:/data/chest_xray
+python main.py --data chestxray_pneu --mode test_ax --ax_method DeepLift --model resnet34_sub --CHEST_XRAY_PNEUMONIA_DATA_DIR C:/data/chest_xray
+
+python main.py --data chestxray_pneu --mode vis_co_score --model resnet34_sub
+
+# similar, but another model
+python main.py --data chestxray_pneu --mode test --model alexnet --CHEST_XRAY_PNEUMONIA_DATA_DIR C:/data/chest_xray
+
+python main.py --data chestxray_pneu --mode test_ax --ax_method Saliency --model alexnet --CHEST_XRAY_PNEUMONIA_DATA_DIR C:/data/chest_xray
+python main.py --data chestxray_pneu --mode test_ax --ax_method InputXGradient --model alexnet --CHEST_XRAY_PNEUMONIA_DATA_DIR C:/data/chest_xray
+python main.py --data chestxray_pneu --mode test_ax --ax_method LayerGradCam --model alexnet --CHEST_XRAY_PNEUMONIA_DATA_DIR C:/data/chest_xray
+python main.py --data chestxray_pneu --mode test_ax --ax_method Deconvolution --model alexnet --CHEST_XRAY_PNEUMONIA_DATA_DIR C:/data/chest_xray
+python main.py --data chestxray_pneu --mode test_ax --ax_method GuidedBackprop --model alexnet --CHEST_XRAY_PNEUMONIA_DATA_DIR C:/data/chest_xray
+python main.py --data chestxray_pneu --mode test_ax --ax_method DeepLift --model alexnet --CHEST_XRAY_PNEUMONIA_DATA_DIR C:/data/chest_xray
+
+python main.py --data chestxray_pneu --mode vis_co_score --model alexnet 
+
+
+##################################
+# Part 2
+##################################
+
+# We are going to repeat some of the experiments we have previously done on other datasets
+
+
+################ CHEST XRAY COVID DATA ###############
+# We need to train a classification model first. Let's not use Resnet
+# and instead use SPA (Spatial Product Attention) module from my other paper
+# "Quantifying Explainability of Saliency Methods in Deep Neural Networks with a Synthetic Dataset"
+
+python main.py --data chestxray_covid --mode visdata --CHEST_XRAY_COVID_DATA_DIR C:/data/COVID-19_Radiography_Dataset
+
+# debugging, for observation
+# With the following, we can find the time taken to run 1 epoch. For my machine with a simple GeForce RTX 3060
+# it took 48 seconds to run 1 epoch
+python main.py --data chestxray_covid --mode trainval --CHEST_XRAY_COVID_DATA_DIR C:/data/COVID-19_Radiography_Dataset --n_epochs 4 --VAL_TARGET 0.4 --label_name debug
+
+# training
+python main.py --data chestxray_covid --mode trainval --CHEST_XRAY_COVID_DATA_DIR C:/data/COVID-19_Radiography_Dataset --n_epochs 256 --VAL_TARGET 0.85 --label_name project01
+
+
+# testing and ax procedure!
+python main.py --data chestxray_covid --mode test --CHEST_XRAY_COVID_DATA_DIR C:/data/COVID-19_Radiography_Dataset --label_name project01
+
+python main.py --data chestxray_covid --mode test_ax --ax_method Saliency --CHEST_XRAY_COVID_DATA_DIR C:/data/COVID-19_Radiography_Dataset --label_name project01
+python main.py --data chestxray_covid --mode test_ax --ax_method InputXGradient --CHEST_XRAY_COVID_DATA_DIR C:/data/COVID-19_Radiography_Dataset --label_name project01
+python main.py --data chestxray_covid --mode test_ax --ax_method LayerGradCam --CHEST_XRAY_COVID_DATA_DIR C:/data/COVID-19_Radiography_Dataset --label_name project01
+python main.py --data chestxray_covid --mode test_ax --ax_method Deconvolution --CHEST_XRAY_COVID_DATA_DIR C:/data/COVID-19_Radiography_Dataset --label_name project01
+python main.py --data chestxray_covid --mode test_ax --ax_method GuidedBackprop --CHEST_XRAY_COVID_DATA_DIR C:/data/COVID-19_Radiography_Dataset --label_name project01
+python main.py --data chestxray_covid --mode test_ax --ax_method DeepLift --CHEST_XRAY_COVID_DATA_DIR C:/data/COVID-19_Radiography_Dataset --label_name project01
+
+python main.py --data chestxray_covid --mode vis_co_score --label_name project01
+
+
+################ ulb-ml-group-fraud-dataset ###############
+python main.py --data creditcardfraud --mode visdata --CREDIT_FRAUD_DATA_DIR C:/data/ulb-ml-group-fraud-dataset/creditcard.csv
+python main.py --data creditcardfraud --mode reconstruct_data --CREDIT_FRAUD_DATA_DIR C:/data/ulb-ml-group-fraud-dataset/creditcard.csv
+
+# debugging
+python main.py --data creditcardfraud --mode trainval --VAL_TARGET 0.6 --n_epochs 4 --label_name debug
+
+# training!
+python main.py --data creditcardfraud --mode trainval --VAL_TARGET 0.9 --n_epochs 256 --label_name project01
+
+# testing and ax procedure!
+python main.py --data creditcardfraud --mode test --label_name project01
+
+python main.py --data creditcardfraud --mode test_ax --ax_method Saliency --label_name project01
+python main.py --data creditcardfraud --mode test_ax --ax_method InputXGradient --label_name project01
+python main.py --data creditcardfraud --mode test_ax --ax_method LayerGradCam --label_name project01
+python main.py --data creditcardfraud --mode test_ax --ax_method Deconvolution --label_name project01
+python main.py --data creditcardfraud --mode test_ax --ax_method GuidedBackprop --label_name project01
+python main.py --data creditcardfraud --mode test_ax --ax_method DeepLift --label_name project01
+
+python main.py --data creditcardfraud --mode vis_co_score --label_name project01
+
+python main.py --data creditcardfraud --mode test_remaining --label_name project01
+
+
+################ Dry_Bean_Dataset ###############
+python main.py --data drybean --mode visdata --DRYBEAN_DATA_DIR C:/data/DryBeanDataset/Dry_Bean_Dataset.xlsx
+python main.py --data drybean --mode reconstruct_data --DRYBEAN_DATA_DIR C:/data/DryBeanDataset/Dry_Bean_Dataset.xlsx
+
+# debugging
+python main.py --data drybean --mode trainval --VAL_TARGET 0.4 --n_epochs 4 --label_name debug
+
+# training!
+python main.py --data drybean --mode trainval --VAL_TARGET 0.85 --n_epochs 256 --label_name project01
+
+python main.py --data drybean --mode test --DRYBEAN_DATA_DIR C:/data/DryBeanDataset/Dry_Bean_Dataset.xlsx --label_name project01
+
+python main.py --data drybean --mode test_ax --ax_method Saliency --label_name project01
+python main.py --data drybean --mode test_ax --ax_method InputXGradient --label_name project01
+python main.py --data drybean --mode test_ax --ax_method LayerGradCam --label_name project01
+python main.py --data drybean --mode test_ax --ax_method Deconvolution --label_name project01
+python main.py --data drybean --mode test_ax --ax_method GuidedBackprop --label_name project01
+python main.py --data drybean --mode test_ax --ax_method DeepLift --label_name project01
+
+python main.py --data drybean --mode vis_co_score --label_name project01
+

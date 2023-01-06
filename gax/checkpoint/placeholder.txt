@@ -1,0 +1,2 @@
+Run the commands to obtain the results in this folder
+(see main README.md for complete instructions)
