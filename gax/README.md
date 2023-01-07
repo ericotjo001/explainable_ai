@@ -6,6 +6,7 @@ Summary. Given a classification model $net$, input $x$ and feature attribution $
 1. Augmentative eXplanation (AX) process is introduced, the basic form being $net(x+h)$
 2. For some heatmap-based XAI methods, with AX process, there is a gap of the distribution of CO scores between the correct and false classification.
 3. Overall accuracy improvement across samples in a dataset is not significant. Some methods cause severe degradation of accuracy.
+4. Generative AX (GAX) is the direct optimization of CO score.
 
 # Version 2.
 The streamlined version of version 1 codes and additional experiments are now available.
