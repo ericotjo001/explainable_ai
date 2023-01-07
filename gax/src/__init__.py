@@ -16,7 +16,6 @@ def entry_imagenet(parser):
 
     parser.add_argument('--mode', default=None, type=str, help=None)
     parser.add_argument('--model', default=None, type=str, help=None)
-    parser.add_argument('--ROOT_DIR', default=None, type=str, help=None)
     parser.add_argument('--IMGNET_DATA_DIR', default=None, type=str, help=None)
 
     parser.add_argument('--ax_method', default=None, type=str, help=None)
@@ -45,7 +44,6 @@ def entry_chestxray(parser):
 
     parser.add_argument('--mode', default=None, type=str, help=None)
     parser.add_argument('--model', default=None, type=str, help=None)
-    parser.add_argument('--ROOT_DIR', default=None, type=str, help=None)
     parser.add_argument('--CHEST_XRAY_PNEUMONIA_DATA_DIR', default=None, type=str, help=None)
 
     parser.add_argument('--ax_method', default=None, type=str, help=None)
@@ -74,7 +72,6 @@ def entry_chestxray_covid(parser):
     print('entry_chestxray_covid...')
 
     parser.add_argument('--mode', default=None, type=str, help=None)
-    parser.add_argument('--ROOT_DIR', default=None, type=str, help=None)
     parser.add_argument('--CHEST_XRAY_COVID_DATA_DIR', default=None, type=str, help=None)
 
     parser.add_argument('--ax_method', default=None, type=str, help=None)
@@ -115,7 +112,6 @@ def entry_creditcardfraud(parser):
     print('entry_creditcardfraud...')
 
     parser.add_argument('--mode', default=None, type=str, help=None)
-    parser.add_argument('--ROOT_DIR', default=None, type=str, help=None)
     parser.add_argument('--CREDIT_FRAUD_DATA_DIR', default=None, type=str, help=None)
 
     parser.add_argument('--ax_method', default=None, type=str, help=None)
@@ -163,7 +159,6 @@ def entry_creditcardfraud(parser):
 def entry_drybean(parser):
     print('entry_drybean...')
     parser.add_argument('--mode', default=None, type=str, help=None)
-    parser.add_argument('--ROOT_DIR', default=None, type=str, help=None)
     parser.add_argument('--DRYBEAN_DATA_DIR', default=None, type=str, help=None)
 
     parser.add_argument('--ax_method', default=None, type=str, help=None)    

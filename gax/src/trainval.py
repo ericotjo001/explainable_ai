@@ -16,7 +16,7 @@ CONTENT PAGE:
 ####################################
 
 def manage_dirs_chestxray_covid(dargs):
-    ROOT_DIR = os.getcwd() if dargs['ROOT_DIR'] is None else dargs['ROOT_DIR']
+    ROOT_DIR = os.getcwd()
     CKPT_DIR = os.path.join(ROOT_DIR, 'checkpoint')
     os.makedirs(CKPT_DIR, exist_ok=True)
 
@@ -221,7 +221,7 @@ def chestxray_covid_validate(net, valloader):
 ####################################
 
 def manage_dirs_creditcardfraud(dargs):
-    ROOT_DIR = os.getcwd() if dargs['ROOT_DIR'] is None else dargs['ROOT_DIR']
+    ROOT_DIR = os.getcwd()
     CKPT_DIR = os.path.join(ROOT_DIR, 'checkpoint')
     os.makedirs(CKPT_DIR, exist_ok=True)
 
@@ -476,7 +476,7 @@ def creditcardfraud_validate(net, valloader):
 ####################################
 
 def manage_dirs_drybean(dargs):
-    ROOT_DIR = os.getcwd() if dargs['ROOT_DIR'] is None else dargs['ROOT_DIR']
+    ROOT_DIR = os.getcwd()
     CKPT_DIR = os.path.join(ROOT_DIR, 'checkpoint')
     os.makedirs(CKPT_DIR, exist_ok=True)
 

@@ -15,7 +15,7 @@ warnings.filterwarnings('ignore')
 # this is chest xray data for pneumonia detection
 
 def manage_dirs(dargs):
-    ROOT_DIR = os.getcwd() if dargs['ROOT_DIR'] is None else dargs['ROOT_DIR']
+    ROOT_DIR = os.getcwd()
     CKPT_DIR = os.path.join(ROOT_DIR, 'checkpoint')
     os.makedirs(CKPT_DIR, exist_ok=True)
 
