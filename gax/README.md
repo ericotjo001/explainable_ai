@@ -2,6 +2,11 @@ This github repository contains all the codes required to replicate the results 
 
 <img src="https://drive.google.com/uc?export=view&id=1N4IDRJepmcK0-PkaqpSBDJdPYZRA7QLh" width="480"></img>
 
+Summary. Given a classification model $net$, input $x$ and feature attribution $h=attr(net,x)$ (e.g. heatmap from Class Activation Mapping):
+1. Augmentative eXplanation (AX) process is introduced, the basic form being $net(x+h)$
+2. For some heatmap-based XAI methods, with AX process, there is a gap of the distribution of CO scores between the correct and false classification.
+3. Overall accuracy improvement across samples in a dataset is not significant. Some methods cause severe degradation of accuracy.
+
 # Version 2.
 The streamlined version of version 1 codes and additional experiments are now available.
 
