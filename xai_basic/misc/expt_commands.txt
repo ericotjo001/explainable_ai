@@ -1,3 +1,5 @@
+The commands here are for python 3 in Windows OS. Use python3 commands accordingly in Unix system.
+
 ########## First, smaller experiments. Only 3 classes ##########
 
 python main.py --mode prepare_data --n_classes 3 --n_shards 16 --n_per_shard 256 --PROJECT_NAME project01
