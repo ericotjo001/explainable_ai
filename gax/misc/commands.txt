@@ -1,4 +1,6 @@
-The commands used here are for v2.
+The commands here are for python 3 in Windows OS. Use python3 commands accordingly in Unix system.
+
+The commands used here are for v2 (version 2) of the gax project.
 
 This means all commands to obtain results from v1 (imagenet and chest x ray for pneumonia) 
 are not included here. Follow the instructions in v1 README etc to get those results.
