@@ -11,7 +11,7 @@ This project provides two bottom-up construction of interpretable universal appr
 Fig. left A1-3,B1-3 show perfect accuracy for function approximations of Triangular Neural Network. Fig. right shows predictions based on interpolations of neighbouring values. 
 
 ### gax
-[Augmentative eXplanation and the Distributional Gap of Confidence Optimization Score](https://arxiv.org/abs/2201.00009) (arxiv).<br>
+[Enhancing the Confidence of Deep Learning Classifiers via Interpretable Saliency Maps](https://arxiv.org/abs/2201.00009) (arxiv).<br>
 This project attempts to improve predictive probability through the Augmentative Explanation process using existing heatmaps methods e.g. GradCAM and DeepLIFT.<br>
 <br>
 <img src="https://drive.google.com/uc?export=view&id=1N4IDRJepmcK0-PkaqpSBDJdPYZRA7QLh" width="480"></img>
