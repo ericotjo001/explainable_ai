@@ -1,6 +1,10 @@
 # Enhancing the Confidence of Deep Learning Classifiers via Interpretable Saliency Maps
 This github repository contains all the codes required to replicate the results in the paper with the above title. Link: [arxiv version](https://arxiv.org/abs/2201.00009).
 
+<img src="https://drive.google.com/uc?export=view&id=1N4IDRJepmcK0-PkaqpSBDJdPYZRA7QLh" width="640"></img>
+
+Figure 1. *Left*: user interface for GAX. *Right*. CO scores shown in box plots for each saliency-based XAI method; correct and wrong predictions are plotted separately. 
+
 In the example below, we run the entire pipeline from training to XAI evaluation on a COVID dataset (only Saliency and InputXGradient are shown for the AX process). The full instructions can be found in misc/commands.txt.
 ```
 python main.py --data chestxray_covid --mode visdata --CHEST_XRAY_COVID_DATA_DIR C:/data/COVID-19_Radiography_Dataset
@@ -26,9 +30,6 @@ y = net(x + attr)
 
 co_score = compute_co_score(y_baseline, y, y0, n_class)
 ```
-
-<img src="https://drive.google.com/uc?export=view&id=1N4IDRJepmcK0-PkaqpSBDJdPYZRA7QLh" width="640"></img>
-Left: user interface for GAX. Right. CO scores shown in box plots for each saliency-based XAI method; correct and wrong predictions are plotted separately. 
 
 Summary. Given a classification model $net$, input $x$ and feature attribution $h=attr(net,x)$ (e.g. heatmap from Class Activation Mapping):
 1. Augmentative eXplanation (AX) process is introduced, the basic form being $net(x+h)$
@@ -67,3 +68,6 @@ COVID-3615.png (both images and masks)
 
 # Version 1.
 Everything related to version 1 code can all be found in legacy/v1 folder. 
+
+
+Previous titles of this paper: (1) Augmentative eXplanation and the Distributional Gap of Confidence Optimization Score (2) Improving Deep Neural Network Classification Confidence using Heatmap-based eXplainable AI
