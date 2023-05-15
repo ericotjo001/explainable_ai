@@ -3,7 +3,7 @@ The commands here are for python 3 in Windows OS. Use python3 commands according
 The commands used here are for v2 (version 2) of the gax project.
 1. PART 1. Follow the instructions in README of legacy/v1 to obtain all results from legacy/v1 (imagenet and chest x ray for pneumonia). 
    Here, the instructions are used to obtain additional results.  
-2. **To see more comprehensive and self-contained examples, please skip to Part 2 below** 
+2. PART 2. **To see more comprehensive and self-contained examples, please skip to Part 2 below** 
    We provide the instruction to run the entire process from training, validation, test and XAI evaluations wtih CO scores 
    and AX methods.
 
