@@ -10,7 +10,8 @@ We provide the instruction to run the entire process from training, validation, 
 ##################################
 # Part 1
 ##################################
-This part contains additional results, complementary to v1. In v1, we plot most of the figures shown in the paper, including the ones with distributional gaps. Here, we want to further observe how the accuracies change after Ax processes etc.
+This part contains additional results, complementary to v1. In v1, we plot most of the figures shown in the paper, 
+including the ones with distributional gaps. Here, we want to further observe how the accuracies change after Ax processes etc.
 
 ############### IMAGENET DATA ###############
 
@@ -84,7 +85,8 @@ python main.py --data chestxray_pneu --mode vis_co_score --model alexnet
 # Part 2
 ##################################
 
-The paper contains results obtained by following the instructions below
+In version 2, we have added 3 more datasets to demonstrate our ideas. 
+The following shows how you can run the entire pipeline.
 
 ################ CHEST XRAY COVID DATA ###############
 # We need to train a classification model first. Let's not use Resnet
