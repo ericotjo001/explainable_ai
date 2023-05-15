@@ -2,13 +2,12 @@ The commands here are for python 3 in Windows OS. Use python3 commands according
 
 The commands used here are for v2 (version 2) of the gax project.
 
-This means all commands to obtain results from v1 (imagenet and chest x ray for pneumonia) 
-are not included here. Follow the instructions in v1 README etc to get those results.
+This means all instructions used to obtain results from legacy/v1 (imagenet and chest x ray for pneumonia) are not included here. Follow the instructions in README of legacy/v1 to obtain those results. *For examples using the full pipeline in this new version (v2), please skip to Part 2 below*. We provide the instruction to run the entire process from training, validation, test and XAI evaluations wtih CO scores and AX methods.
 
 ##################################
 # Part 1
 ##################################
-This is additional results, complementary to v1. In v1, we plot results, including the ones with distributional gaps. Here, we also want to know how the accuracies change.
+This part contains additional results, complementary to v1. In v1, we plot most of the figures shown in the paper, including the ones with distributional gaps. Here, we want to further observe how the accuracies change after Ax processes etc.
 
 ############### IMAGENET DATA ###############
 
@@ -25,9 +24,7 @@ python main.py --data imagenet --mode val_ax --ax_method DeepLift --model resnet
 
 python main.py --data imagenet --mode vis_co_score --model resnet34 
 
-
-
-# repeat, but for alexnet
+# same as above, but for alexnet
 python main.py --data imagenet --mode val --model alexnet --IMGNET_DATA_DIR C:/data/ImageNet/ILSVRC
 
 python main.py --data imagenet --mode val_ax --ax_method Saliency --model alexnet --IMGNET_DATA_DIR C:/data/ImageNet/ILSVRC
@@ -55,7 +52,7 @@ python main.py --data chestxray_pneu --mode test_ax --ax_method DeepLift --model
 
 python main.py --data chestxray_pneu --mode vis_co_score --model resnet34 
 
-# similar, but another model
+# similar to the above, but for another model
 python main.py --data chestxray_pneu --mode test --model resnet34_sub --CHEST_XRAY_PNEUMONIA_DATA_DIR C:/data/chest_xray
 
 python main.py --data chestxray_pneu --mode test_ax --ax_method Saliency --model resnet34_sub --CHEST_XRAY_PNEUMONIA_DATA_DIR C:/data/chest_xray
@@ -67,7 +64,7 @@ python main.py --data chestxray_pneu --mode test_ax --ax_method DeepLift --model
 
 python main.py --data chestxray_pneu --mode vis_co_score --model resnet34_sub
 
-# similar, but another model
+# similar to the above, but for another model
 python main.py --data chestxray_pneu --mode test --model alexnet --CHEST_XRAY_PNEUMONIA_DATA_DIR C:/data/chest_xray
 
 python main.py --data chestxray_pneu --mode test_ax --ax_method Saliency --model alexnet --CHEST_XRAY_PNEUMONIA_DATA_DIR C:/data/chest_xray
@@ -84,8 +81,7 @@ python main.py --data chestxray_pneu --mode vis_co_score --model alexnet
 # Part 2
 ##################################
 
-# We are going to repeat some of the experiments we have previously done on other datasets
-
+The paper contains results obtained by following the instructions below
 
 ################ CHEST XRAY COVID DATA ###############
 # We need to train a classification model first. Let's not use Resnet
