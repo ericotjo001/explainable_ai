@@ -1,6 +1,34 @@
-This github repository contains all the codes required to replicate the results in the paper <b>Improving Deep Neural Network Classification Confidence using Heatmap-based eXplainable AI</b>. Link: [arxiv version](https://arxiv.org/abs/2201.00009).
+# Enhancing the Confidence of Deep Learning Classifiers via Interpretable Saliency Maps
+This github repository contains all the codes required to replicate the results in the paper with the above title. Link: [arxiv version](https://arxiv.org/abs/2201.00009).
+
+In the example below, we run the entire pipeline from training to XAI evaluation on a COVID dataset (only Saliency and InputXGradient are shown for the AX process). The full instructions can be found in misc/commands.txt.
+```
+python main.py --data chestxray_covid --mode visdata --CHEST_XRAY_COVID_DATA_DIR C:/data/COVID-19_Radiography_Dataset
+
+python main.py --data chestxray_covid --mode trainval --CHEST_XRAY_COVID_DATA_DIR C:/data/COVID-19_Radiography_Dataset --n_epochs 256 --VAL_TARGET 0.85 --label_name project01
+python main.py --data chestxray_covid --mode test --CHEST_XRAY_COVID_DATA_DIR C:/data/COVID-19_Radiography_Dataset --label_name project01
+
+python main.py --data chestxray_covid --mode test_ax --ax_method Saliency --CHEST_XRAY_COVID_DATA_DIR C:/data/COVID-19_Radiography_Dataset --label_name project01
+python main.py --data chestxray_covid --mode test_ax --ax_method InputXGradient --CHEST_XRAY_COVID_DATA_DIR C:/data/COVID-19_Radiography_Dataset --label_name project01
+
+python main.py --data chestxray_covid --mode vis_co_score --label_name project01
+```
+
+The outline of the core mechanisms are shown below. In essence, CO score compares net(x+attr) and net(x).
+```
+normalize = get_transform(transformtype='one_channel')
+ax = AugEplanation(method=ax_method, model=model)
+
+y_baseline = net(x)
+attr = ax.get_attribution_by_method(net, x)
+attr = ax.normalize_attr(attr)
+y = net(x + attr)
+
+co_score = compute_co_score(y_baseline, y, y0, n_class)
+```
 
 <img src="https://drive.google.com/uc?export=view&id=1N4IDRJepmcK0-PkaqpSBDJdPYZRA7QLh" width="640"></img>
+Left: user interface for GAX. Right. CO scores shown in box plots for each saliency-based XAI method; correct and wrong predictions are plotted separately. 
 
 Summary. Given a classification model $net$, input $x$ and feature attribution $h=attr(net,x)$ (e.g. heatmap from Class Activation Mapping):
 1. Augmentative eXplanation (AX) process is introduced, the basic form being $net(x+h)$
