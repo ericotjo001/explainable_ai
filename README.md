@@ -4,7 +4,7 @@ $\color{red}{\text{2023 July Update: this repo is in an old format. Find my newe
 This repository includes the codes for different projects on eXplainable Artificial Intelligence (XAI) by the main author. 
 
 ### xaia
-[Two Instances of Interpretable Neural Network for Universal Approximations](https://arxiv.org/abs/2112.15026) (arxiv).<br>
+[Two Instances of Interpretable Neural Network for Universal Approximations](https://arxiv.org/abs/2112.15026) (arxiv). The paper has also been published in the journal [Neurocomputing](https://www.sciencedirect.com/science/article/pii/S0925231223009487)!<br>
 This project provides two bottom-up construction of interpretable universal approximations. <br>
 <br>
 <img src="https://drive.google.com/uc?export=view&id=1MUuld0DtNnvFemJZ1Fl1cni8Svmamwbr" width="240"></img>
