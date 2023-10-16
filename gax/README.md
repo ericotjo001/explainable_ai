@@ -1,5 +1,5 @@
 # Enhancing the Confidence of Deep Learning Classifiers via Interpretable Saliency Maps
-This github repository contains all the codes required to replicate the results in the paper with the above title. Link: [arxiv version](https://arxiv.org/abs/2201.00009).
+This github repository contains all the codes required to replicate the results in the paper with the above title. Link: [arxiv version](https://arxiv.org/abs/2201.00009). The paper has also been published in the journal [Neurocomputing](https://www.sciencedirect.com/science/article/pii/S0925231223009487)!
 
 <img src="https://drive.google.com/uc?export=view&id=1N4IDRJepmcK0-PkaqpSBDJdPYZRA7QLh" width="640"></img>
 
