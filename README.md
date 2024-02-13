@@ -20,7 +20,7 @@ This project attempts to improve predictive probability through the Augmentative
 
 ### xai_basic
 This project provides synthetic dataset to measure the 'accuracy of heatmaps'.<br>
-[**Quantifying Explainability of Saliency Methods in Deep Neural Networks**](https://arxiv.org/abs/2009.02899) (arxiv). <br>
+[**Quantifying Explainability of Saliency Methods in Deep Neural Networks**](https://ieeexplore.ieee.org/abstract/document/9983502) (IEEE TAI). <br>
 <img src="https://drive.google.com/uc?export=view&id=1GjHAn62ahfeBOaRoxcVMOwpMuQP7nFN2" width="360"></img><br>
 Fig. shows the synthetic dataset.
 
