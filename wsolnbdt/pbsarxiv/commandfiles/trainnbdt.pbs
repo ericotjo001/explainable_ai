@@ -1,0 +1,16 @@
+#!/bin/sh
+#PBS -l select=1:ncpus=40:ngpus=8
+#PBS -l walltime=48:00:00
+#PBS -q dgx
+#PBS -P 12001577
+#PBS -joe
+
+cd $PBS_O_WORKDIR
+
+module load cuda/10.1
+nvidia-smi
+
+module load singularity
+
+singularity exec --nv --bind wsolevaluation-master/:/mnt USandbox/ python3 /mnt/x_nbdt_main.py --mode train --arch ResNet50CAM --hierarchy induced-ResNet50CAM --epochs 12 --batch-size 256 --ROOT_DIR wsolevaluation-master --debug_toggles 000000 --resume 1 --eval 0 --lr 0.001 --loss SoftTreeSupLoss
+

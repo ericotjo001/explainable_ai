@@ -1,0 +1,93 @@
+/var/spool/pbs/mom_priv/jobs/7587315.wlm01.SC: 10: /var/spool/pbs/mom_priv/jobs/7587315.wlm01.SC: module: not found
+Sun Feb 27 12:29:39 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 418.67       Driver Version: 418.67       CUDA Version: 10.1     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla V100-SXM2...  On   | 00000000:06:00.0 Off |                    0 |
+| N/A   34C    P0    41W / 300W |      0MiB / 16130MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla V100-SXM2...  On   | 00000000:07:00.0 Off |                    0 |
+| N/A   36C    P0    40W / 300W |      0MiB / 16130MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   2  Tesla V100-SXM2...  On   | 00000000:0A:00.0 Off |                    0 |
+| N/A   35C    P0    44W / 300W |      0MiB / 16130MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   3  Tesla V100-SXM2...  On   | 00000000:0B:00.0 Off |                    0 |
+| N/A   33C    P0    44W / 300W |      0MiB / 16130MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   4  Tesla V100-SXM2...  On   | 00000000:85:00.0 Off |                    0 |
+| N/A   37C    P0    44W / 300W |      0MiB / 16130MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   5  Tesla V100-SXM2...  On   | 00000000:86:00.0 Off |                    0 |
+| N/A   35C    P0    42W / 300W |      0MiB / 16130MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   6  Tesla V100-SXM2...  On   | 00000000:89:00.0 Off |                    0 |
+| N/A   38C    P0    43W / 300W |      0MiB / 16130MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   7  Tesla V100-SXM2...  On   | 00000000:8A:00.0 Off |                    0 |
+| N/A   36C    P0    43W / 300W |      0MiB / 16130MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+/var/spool/pbs/mom_priv/jobs/7587315.wlm01.SC: 13: /var/spool/pbs/mom_priv/jobs/7587315.wlm01.SC: module: not found
+WARNING: underlay of /usr/bin/nvidia-smi required more than 50 (313) bind mounts
+stty: 'standard input': Inappropriate ioctl for device
+Buffer just in case....
+
+
+Executing quickruns...
+switching root dir to  wsolevaluation-master
+/scratch/users/ntu/ericotjo/wsolevaluation-master
+not enough values to unpack (expected 2, got 0)
+training_entry_pipeline()
+trying to use CUDA...
+n_gpus: 8
+==> Preparing data..
+overwriting val2 labels!!
+==> Building model..
+attempting to use DataParallel...
+==> Checkpoints will be saved to: ./checkpoint/ckpt-ILSVRC-ResNet50CAM-lr0.001-SoftTreeSupLoss.pth
+Tree.path_graph:
+  /mnt/nbdt/hierarchies/ILSVRC/graph-induced-ResNet50CAM.json
+[36mclasses:	(callable) [0m
+[36mcriterion:	(callable) [0m
+[36mdataset:	(callable) [0m
+[36mhierarchy:	induced-ResNet50CAM [0m
+[36mtree:	(callable) [0m
+[36mtree_supervision_weight:	1 [0m
+==> setting up optimizer...
+learning rate: 0.001
+[36mclasses:	(callable) [0m
+epoch:0 iter: 256/5005                                          epoch:0 iter: 512/5005                                          epoch:0 iter: 768/5005                                          epoch:0 iter: 1024/5005                                         epoch:0 iter: 1280/5005                                         epoch:0 iter: 1536/5005                                         epoch:0 iter: 1792/5005                                         epoch:0 iter: 2048/5005                                         epoch:0 iter: 2304/5005                                         epoch:0 iter: 2560/5005                                         epoch:0 iter: 2816/5005                                         epoch:0 iter: 3072/5005                                         epoch:0 iter: 3328/5005                                         epoch:0 iter: 3584/5005                                         epoch:0 iter: 3840/5005                                         epoch:0 iter: 4096/5005                                         epoch:0 iter: 4352/5005                                         epoch:0 iter: 4608/5005                                         epoch:0 iter: 4864/5005                                         epoch:0 iter: 5005/5005                                         epoch:0 iter: 4/50                                              epoch:0 iter: 8/50                                              epoch:0 iter: 12/50                                             epoch:0 iter: 16/50                                             epoch:0 iter: 20/50                                             epoch:0 iter: 24/50                                             epoch:0 iter: 28/50                                             epoch:0 iter: 32/50                                             epoch:0 iter: 36/50                                             epoch:0 iter: 40/50                                             epoch:0 iter: 44/50                                             epoch:0 iter: 48/50                                             epoch:0 iter: 50/50                                             [32mSaving to ckpt-ILSVRC-ResNet50CAM-lr0.001-SoftTreeSupLoss (72.32).. [0m
+Accuracy: 72.32, 7232/10000 | Best Accurracy: 72.32
+epoch:1 iter: 256/5005                                          epoch:1 iter: 512/5005                                          epoch:1 iter: 768/5005                                          epoch:1 iter: 1024/5005                                         epoch:1 iter: 1280/5005                                         epoch:1 iter: 1536/5005                                         epoch:1 iter: 1792/5005                                         epoch:1 iter: 2048/5005                                         epoch:1 iter: 2304/5005                                         epoch:1 iter: 2560/5005                                         epoch:1 iter: 2816/5005                                         epoch:1 iter: 3072/5005                                         epoch:1 iter: 3328/5005                                         epoch:1 iter: 3584/5005                                         epoch:1 iter: 3840/5005                                         epoch:1 iter: 4096/5005                                         epoch:1 iter: 4352/5005                                         epoch:1 iter: 4608/5005                                         epoch:1 iter: 4864/5005                                         epoch:1 iter: 5005/5005                                         epoch:1 iter: 4/50                                              epoch:1 iter: 8/50                                              epoch:1 iter: 12/50                                             epoch:1 iter: 16/50                                             epoch:1 iter: 20/50                                             epoch:1 iter: 24/50                                             epoch:1 iter: 28/50                                             epoch:1 iter: 32/50                                             epoch:1 iter: 36/50                                             epoch:1 iter: 40/50                                             epoch:1 iter: 44/50                                             epoch:1 iter: 48/50                                             epoch:1 iter: 50/50                                             [32mSaving to ckpt-ILSVRC-ResNet50CAM-lr0.001-SoftTreeSupLoss (72.02).. [0m
+Accuracy: 72.02, 7202/10000 | Best Accurracy: 72.32
+epoch:2 iter: 256/5005                                          epoch:2 iter: 512/5005                                          epoch:2 iter: 768/5005                                          epoch:2 iter: 1024/5005                                         epoch:2 iter: 1280/5005                                         epoch:2 iter: 1536/5005                                         epoch:2 iter: 1792/5005                                         epoch:2 iter: 2048/5005                                         epoch:2 iter: 2304/5005                                         epoch:2 iter: 2560/5005                                         epoch:2 iter: 2816/5005                                         epoch:2 iter: 3072/5005                                         epoch:2 iter: 3328/5005                                         epoch:2 iter: 3584/5005                                         epoch:2 iter: 3840/5005                                         epoch:2 iter: 4096/5005                                         epoch:2 iter: 4352/5005                                         epoch:2 iter: 4608/5005                                         epoch:2 iter: 4864/5005                                         epoch:2 iter: 5005/5005                                         epoch:2 iter: 4/50                                              epoch:2 iter: 8/50                                              epoch:2 iter: 12/50                                             epoch:2 iter: 16/50                                             epoch:2 iter: 20/50                                             epoch:2 iter: 24/50                                             epoch:2 iter: 28/50                                             epoch:2 iter: 32/50                                             epoch:2 iter: 36/50                                             epoch:2 iter: 40/50                                             epoch:2 iter: 44/50                                             epoch:2 iter: 48/50                                             epoch:2 iter: 50/50                                             [32mSaving to ckpt-ILSVRC-ResNet50CAM-lr0.001-SoftTreeSupLoss (72.24000000000001).. [0m
+Accuracy: 72.24000000000001, 7224/10000 | Best Accurracy: 72.32
+
+
+Training time taken 134348.5 [s] 2239.1 [min] 37.3 [hr] 
+======================================================================================
+
+			Resource Usage on 2022-03-01 01:50:43.606942:
+
+	JobId: 7587315.wlm01  
+	Project: 12001577 
+	Exit Status: 0
+	NCPUs Requested: 40				NCPUs Used: 40
+							CPU Time Used: 82:24:12
+	Memory Requested: None 				Memory Used: 139919308kb
+							Vmem Used: 615004192kb
+	Walltime requested: 48:00:00 			Walltime Used: 37:21:03
+	
+	Execution Nodes Used: (dgx4104:ncpus=40:ngpus=8)
+	
+ ======================================================================================

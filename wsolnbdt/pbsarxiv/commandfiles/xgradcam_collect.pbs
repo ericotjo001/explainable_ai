@@ -1,0 +1,23 @@
+#!/bin/sh
+#PBS -l select=1:ncpus=5:ngpus=1:mem=16gb
+#PBS -l walltime=24:00:00
+#PBS -q gpu
+#PBS -P 12001577
+#PBS -joe
+
+cd $PBS_O_WORKDIR
+
+module load cuda/10.1
+nvidia-smi
+
+module load singularity
+singularity exec --nv --bind wsolevaluation-master/:/mnt MyPyTorchSandBox/ python /mnt/xquickruns_resnet50.py   --scoremap_root=xresearchlog/resnet50_gradcam  --scoremap_mode gradcam --scoremap_submode input --ROOT_DIR wsolevaluation-master --debug_toggles 00000 
+
+singularity exec --nv --bind wsolevaluation-master/:/mnt MyPyTorchSandBox/ python /mnt/xquickruns_resnet50.py   --scoremap_root=xresearchlog/resnet50_gradcam  --scoremap_mode gradcam --scoremap_submode layer1 --ROOT_DIR wsolevaluation-master --debug_toggles 00000 
+
+singularity exec --nv --bind wsolevaluation-master/:/mnt MyPyTorchSandBox/ python /mnt/xquickruns_resnet50.py   --scoremap_root=xresearchlog/resnet50_gradcam  --scoremap_mode gradcam --scoremap_submode layer2 --ROOT_DIR wsolevaluation-master --debug_toggles 00000 
+
+singularity exec --nv --bind wsolevaluation-master/:/mnt MyPyTorchSandBox/ python /mnt/xquickruns_resnet50.py   --scoremap_root=xresearchlog/resnet50_gradcam  --scoremap_mode gradcam --scoremap_submode layer3 --ROOT_DIR wsolevaluation-master --debug_toggles 00000 
+
+singularity exec --nv --bind wsolevaluation-master/:/mnt MyPyTorchSandBox/ python /mnt/xquickruns_resnet50.py   --scoremap_root=xresearchlog/resnet50_gradcam  --scoremap_mode gradcam --scoremap_submode layer4 --ROOT_DIR wsolevaluation-master --debug_toggles 00000 
+

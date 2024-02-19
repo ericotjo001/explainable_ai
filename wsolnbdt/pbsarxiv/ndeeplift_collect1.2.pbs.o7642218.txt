@@ -1,0 +1,75 @@
+/var/spool/pbs/mom_priv/jobs/7642218.wlm01.SC: 10: /var/spool/pbs/mom_priv/jobs/7642218.wlm01.SC: module: not found
+Thu Mar 10 11:12:47 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 418.67       Driver Version: 418.67       CUDA Version: 10.1     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla V100-SXM2...  On   | 00000000:8A:00.0 Off |                    0 |
+| N/A   40C    P0    43W / 300W |      0MiB / 16130MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+/var/spool/pbs/mom_priv/jobs/7642218.wlm01.SC: 13: /var/spool/pbs/mom_priv/jobs/7642218.wlm01.SC: module: not found
+WARNING: underlay of /usr/bin/nvidia-smi required more than 50 (313) bind mounts
+stty: 'standard input': Inappropriate ioctl for device
+Buffer just in case....
+
+
+Executing quickruns...
+switching root dir to  wsolevaluation-master
+/scratch/users/ntu/ericotjo/wsolevaluation-master
+not enough values to unpack (expected 2, got 0)
+trying to use CUDA...
+meta_path: metadata/ILSVRC/test
+HeatmapComputerResnet50ILSVRC ILSVRC type 1...
+Using NBDT...!
+loading NBDT-trained model using their fix from nbdt.models.utils
+0 val/ILSVRC2012_val_00000001.JPEG
+1 val/ILSVRC2012_val_00000002.JPEG
+2 val/ILSVRC2012_val_00000003.JPEG
+3 val/ILSVRC2012_val_00000004.JPEG
+4 val/ILSVRC2012_val_00000005.JPEG
+5 val/ILSVRC2012_val_00000006.JPEG
+6 val/ILSVRC2012_val_00000007.JPEG
+7 val/ILSVRC2012_val_00000008.JPEG
+8 val/ILSVRC2012_val_00000009.JPEG
+9 val/ILSVRC2012_val_00000010.JPEG
+1200/50000                                                      2400/50000                                                      3600/50000                                                      4800/50000                                                      6000/50000                                                      7200/50000                                                      8400/50000                                                      9600/50000                                                      10800/50000                                                     12000/50000                                                     13200/50000                                                     14400/50000                                                     15600/50000                                                     16800/50000                                                     18000/50000                                                     19200/50000                                                     20400/50000                                                     21600/50000                                                     22800/50000                                                     24000/50000                                                     25200/50000                                                     26400/50000                                                     27600/50000                                                     28800/50000                                                     30000/50000                                                     31200/50000                                                     32400/50000                                                     33600/50000                                                     34800/50000                                                     36000/50000                                                     37200/50000                                                     38400/50000                                                     39600/50000                                                     40800/50000                                                     42000/50000                                                     43200/50000                                                     44400/50000                                                     45600/50000                                                     46800/50000                                                     48000/50000                                                     49200/50000                                                     49999 val/ILSVRC2012_val_00050000.JPEG
+50000/50000                                                     
+
+time taken 8852.0[s] 
+
+Done generating heatmaps!
+Loading and evaluating cams.
+len(cam_loader): 50000
+/opt/conda/lib/python3.6/site-packages/captum/attr/_core/deep_lift.py:323: UserWarning: Setting forward, backward hooks and attributes on non-linear
+               activations. The hooks and attributes will be removed
+            after the attribution is finished
+  after the attribution is finished"""
+n_classes: 1200/50000 n_img_id: 1/1 val/ILSVRC2012_val_00001200.JPEGn_classes: 2400/50000 n_img_id: 1/1 val/ILSVRC2012_val_00002400.JPEGn_classes: 3600/50000 n_img_id: 1/1 val/ILSVRC2012_val_00003600.JPEGn_classes: 4800/50000 n_img_id: 1/1 val/ILSVRC2012_val_00004800.JPEGn_classes: 6000/50000 n_img_id: 1/1 val/ILSVRC2012_val_00006000.JPEGn_classes: 7200/50000 n_img_id: 1/1 val/ILSVRC2012_val_00007200.JPEGn_classes: 8400/50000 n_img_id: 1/1 val/ILSVRC2012_val_00008400.JPEGn_classes: 9600/50000 n_img_id: 1/1 val/ILSVRC2012_val_00009600.JPEGn_classes: 10800/50000 n_img_id: 1/1 val/ILSVRC2012_val_00010800.JPEGn_classes: 12000/50000 n_img_id: 1/1 val/ILSVRC2012_val_00012000.JPEGn_classes: 13200/50000 n_img_id: 1/1 val/ILSVRC2012_val_00013200.JPEGn_classes: 14400/50000 n_img_id: 1/1 val/ILSVRC2012_val_00014400.JPEGn_classes: 15600/50000 n_img_id: 1/1 val/ILSVRC2012_val_00015600.JPEGn_classes: 16800/50000 n_img_id: 1/1 val/ILSVRC2012_val_00016800.JPEGn_classes: 18000/50000 n_img_id: 1/1 val/ILSVRC2012_val_00018000.JPEGn_classes: 19200/50000 n_img_id: 1/1 val/ILSVRC2012_val_00019200.JPEGn_classes: 20400/50000 n_img_id: 1/1 val/ILSVRC2012_val_00020400.JPEGn_classes: 21600/50000 n_img_id: 1/1 val/ILSVRC2012_val_00021600.JPEGn_classes: 22800/50000 n_img_id: 1/1 val/ILSVRC2012_val_00022800.JPEGn_classes: 24000/50000 n_img_id: 1/1 val/ILSVRC2012_val_00024000.JPEGn_classes: 25200/50000 n_img_id: 1/1 val/ILSVRC2012_val_00025200.JPEGn_classes: 26400/50000 n_img_id: 1/1 val/ILSVRC2012_val_00026400.JPEGn_classes: 27600/50000 n_img_id: 1/1 val/ILSVRC2012_val_00027600.JPEGn_classes: 28800/50000 n_img_id: 1/1 val/ILSVRC2012_val_00028800.JPEGn_classes: 30000/50000 n_img_id: 1/1 val/ILSVRC2012_val_00030000.JPEGn_classes: 31200/50000 n_img_id: 1/1 val/ILSVRC2012_val_00031200.JPEGn_classes: 32400/50000 n_img_id: 1/1 val/ILSVRC2012_val_00032400.JPEGn_classes: 33600/50000 n_img_id: 1/1 val/ILSVRC2012_val_00033600.JPEGn_classes: 34800/50000 n_img_id: 1/1 val/ILSVRC2012_val_00034800.JPEGn_classes: 36000/50000 n_img_id: 1/1 val/ILSVRC2012_val_00036000.JPEGn_classes: 37200/50000 n_img_id: 1/1 val/ILSVRC2012_val_00037200.JPEGn_classes: 38400/50000 n_img_id: 1/1 val/ILSVRC2012_val_00038400.JPEGn_classes: 39600/50000 n_img_id: 1/1 val/ILSVRC2012_val_00039600.JPEGn_classes: 40800/50000 n_img_id: 1/1 val/ILSVRC2012_val_00040800.JPEGn_classes: 42000/50000 n_img_id: 1/1 val/ILSVRC2012_val_00042000.JPEGn_classes: 43200/50000 n_img_id: 1/1 val/ILSVRC2012_val_00043200.JPEGn_classes: 44400/50000 n_img_id: 1/1 val/ILSVRC2012_val_00044400.JPEGn_classes: 45600/50000 n_img_id: 1/1 val/ILSVRC2012_val_00045600.JPEGn_classes: 46800/50000 n_img_id: 1/1 val/ILSVRC2012_val_00046800.JPEGn_classes: 48000/50000 n_img_id: 1/1 val/ILSVRC2012_val_00048000.JPEGn_classes: 49200/50000 n_img_id: 1/1 val/ILSVRC2012_val_00049200.JPEGn_classes: 50000/50000 n_img_id: 1/1 val/ILSVRC2012_val_00050000.JPEG time taken 5328.4[s] 
+
+Done...
+saving results...
+======================================================================================
+
+			Resource Usage on 2022-03-10 15:10:57.791341:
+
+	JobId: 7642218.wlm01  
+	Project: 12001577 
+	Exit Status: 0
+	NCPUs Requested: 5				NCPUs Used: 5
+							CPU Time Used: 71:13:15
+	Memory Requested: 16gb 				Memory Used: 18912728kb
+							Vmem Used: 68557380kb
+	Walltime requested: 24:00:00 			Walltime Used: 03:58:10
+	
+	Execution Nodes Used: (dgx4106:ncpus=5:ngpus=1:mem=16777216kb)
+	
+ ======================================================================================

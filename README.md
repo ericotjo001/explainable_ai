@@ -26,3 +26,9 @@ Fig. shows the synthetic dataset.
 
 ### fcalc
 This project is for [**Generalization on the Enhancement of Layerwise Relevance Interpretability of Deep Neural Network**](https://arxiv.org/abs/2009.02516). The project has been discontinued.
+
+### uappx
+This subrepo contains the code for [**kaBEDONN**](https://www.researchgate.net/publication/360462999_kaBEDONN_posthoc_eXplainable_Artificial_Intelligence_with_Data_Ordered_Neural_Network). The project has been discontinued.
+
+### wsolnbdt
+This subrepo contains the code for [**Evaluating Weakly Supervised Object Localization Methods Right? A Study on Heatmap-based XAI and Neural Backed Decision Tree**](https://www.researchgate.net/publication/360609079_Evaluating_Weakly_Supervised_Object_Localization_Methods_Right_A_Study_on_Heatmap-based_XAI_and_Neural_Backed_Decision_Tree). The project has been discontinued.

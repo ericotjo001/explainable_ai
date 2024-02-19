@@ -1,0 +1,10 @@
+joblib
+matplotlib
+captum
+munch
+scikit-image
+scikit-learn
+pytorchcv
+nltk
+opencv-python
+
